@@ -59,7 +59,6 @@ var textFP = document.createElement("P");
 textFP.setAttribute('id',"p_top_light");
 
 //add css
-textFP.style.fontFamily = "Gothic century";
 textFP.style.fontSize = "17px";
 textFP.style.margin = "initial";
 if(Theme == "light"){
@@ -78,8 +77,7 @@ DivR.appendChild(textFP);
 var textSP = document.createElement("P");
 textSP.setAttribute('id',"p_bottom_light");
 //add css
-textSP.style.fontFamily = "Gothic century";
-textSP.style.fontWeight = "900";
+textSP.style.fontWeight = "700";
 textSP.style.fontSize = "21px";
 textSP.style.margin = "initial";
 if(Theme == "light"){
@@ -91,12 +89,6 @@ else {
 var textS = document.createTextNode("fruitask Analytics");
 textSP.appendChild(textS);
 DivR.appendChild(textSP);
-
-//add texts to Right section
-
-//add sections to Button
-
-
 
 // 3. Add event handler
 Button.addEventListener ("click", function() {
