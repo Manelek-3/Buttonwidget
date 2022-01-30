@@ -37,7 +37,7 @@ Button.appendChild(DivL);
 
 //Image
 var image = document.createElement("img");
-image.src = "./Icon.png";
+image.src = "https://cdn.fruitask.com/Icon.png ";
 
 //add image to section
 DivL.appendChild(image);
