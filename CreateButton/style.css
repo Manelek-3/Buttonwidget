@@ -1,0 +1,25 @@
+body {
+  padding: 20px;
+}
+#div_Button {
+  display: flex;
+  border-radius: 5px;
+  width: 20vw;
+  padding: 10px;
+  background-color: rgb(50, 51, 55);
+}
+#div_img {
+  align-self: center;
+}
+#div_Right {
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(50, 51, 55);
+  align-items: center;
+  justify-content: center;
+}
+p {
+  margin: initial;
+  color: rgb(160,178,180);
+}
