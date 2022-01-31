@@ -2,7 +2,9 @@
 var scripts = document.getElementsByTagName("script");
 var Theme = scripts[scripts.length - 1].getAttribute("data-theme");
 var Token = scripts[scripts.length - 1].getAttribute("data-token");
-console.log(Token);
+var place = scripts[scripts.length - 1].getAttribute("data-under");
+console.log(place);
+
 // 1. Create the div
 //Total button
 var Button = document.createElement("Div");
@@ -26,8 +28,8 @@ else {
 
 
 // 2. Append somewhere
-var body = document.getElementsByTagName("body")[0];
-body.appendChild(Button);
+var above = document.getElementById(place);
+above.append(Button);
 
 //Image section of button
 var DivL = document.createElement("Div");
@@ -94,14 +96,3 @@ DivR.appendChild(textSP);
 Button.addEventListener ("click", function() {
   alert("Our Team");
 });
-
-document.body.onload = addElement;
-
-function addElement () {
-  // create a new div element
-  const newDiv = document.createElement("div");
-
-  // add the newly created element and its content into the DOM
-  const currentDiv = document.getElementById("div");
-  document.body.insertBefore(newDiv, currentDiv);
-}
