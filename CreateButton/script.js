@@ -3,7 +3,7 @@ var scripts = document.getElementsByTagName("script");
 var Theme = scripts[scripts.length - 1].getAttribute("data-theme");
 var Token = scripts[scripts.length - 1].getAttribute("data-token");
 var place = scripts[scripts.length - 1].getAttribute("data-under");
-console.log(place);
+//console.log(place);
 
 // 1. Create the div
 //Total button
@@ -25,6 +25,22 @@ if(Theme == "light"){
 else {
   Button.style.backgroundColor = "rgb(40, 40, 40)";  
 }
+
+//pull
+//run ajax to connect and pull data
+var url = "https://cdn.fruitask.com/analytics.php";
+var xhttp = new XMLHttpRequest();
+xhttp.open("POST", url, true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("column=dfdf");
+xhttp.onreadystatechange = function () {
+if(this.responseText.includes("CONNECTED")){
+    
+}
+console.log(this.responseText);
+}
+console.log('Fruitask 7:0:0:6');
+
 
 
 // 2. Append somewhere
@@ -70,7 +86,7 @@ else {
   textFP.style.color = "rgb(158,180,34)";
 }
 
-var textF = document.createTextNode("100K visitors monthly");
+var textF = document.createTextNode("Connecting..");
 textFP.appendChild(textF);
 DivR.appendChild(textFP);
 
@@ -94,5 +110,6 @@ DivR.appendChild(textSP);
 
 // 3. Add event handler
 Button.addEventListener ("click", function() {
-  alert("Our Team");
+  //alert("Our Team");
+  window.open('https://fruitask.com');
 });
